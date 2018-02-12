@@ -1,6 +1,6 @@
 # Личный проект «Глейси»
 
-* Студент: [Konstantin Grebenev](https://up.htmlacademy.ru/htmlcss/19/user/536017).
+* Студент: [Nazzarik]().
 * Наставник: `Неизвестно`.
 
 ---
