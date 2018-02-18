@@ -11,12 +11,12 @@
 
     <header class="main-header container">
     	<nav class="main-navigation">
-    		<a class="main-header-logo">
+    		<a href="index.html" class="main-header-logo">
     			<img src="img/svg-gllacy/logo.svg" width="154" height="64" alt="logo">
     		</a>
     		<ul class="site-navigation">
     			<li>
-    				<a href="#"><span>Каталог</span></a>
+    				<a class="current-page" href="#"><span>Каталог</span></a>
     				<ul class="submenu">
     					<li class="dropdown-item">
     						<a class="dropdown" href="#">Новинки</a>
@@ -25,7 +25,7 @@
     						<a href="#">Сливочное</a>
     					</li>
     					<li class="dropdown-item">
-    						<a href="inner.html">Щербеты</a>
+    						<a>Щербеты</a>
     					</li>
     					<li class="dropdown-item">
     						<a href="#">Фруктовый лед</a>
@@ -76,9 +76,9 @@
   				</li>
   				<li class="bascet-container">
   					<a class="user-basket user-icon-all" href="#">
-  						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#fff"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
-  						<!-- <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg> -->
-  						<span class="user-icon">Пусто</span>
+  						<!-- <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#fff"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg> -->
+  						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
+  						<span class="user-icon">2 товара</span>
   					</a>
   				</li>
   			</ul>
@@ -92,7 +92,326 @@
     	</div>
     </header>
 
-    <main class="main-content">
+		<main class="inner-page container">
+			<section class="breadcrumbs">
+				<ul class="crumbs-list">
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="#">Каталог</a>
+					</li>
+					<li>
+						<a>Сливочное</a>
+					</li>
+				</ul>
+				<h1>Сливочное мороженое</h1>
+			</section>
+
+			<section class="filters">
+				<h2 class="visually-hidden">Фильтр товаров</h2>
+				<form class="main-filter" action="#" method="GET">
+					<div class="filter-row">
+						<div class="filter-col">
+							<h3 class="filter-heading">Сортировка</h3>
+							<select name="sorting-rule" id="sorting-rule" title="Сортировка">
+								<option value="popular">по популярности</option>
+								<option value="first-chip">сначала недорогие</option>
+								<option value="first-expensive">сначала дорогие</option>
+								<option value="fat">по жирности</option>
+							</select>
+						</div>
+
+						<div class="filter-col">
+							<h3 class="filter-heading">Цена: 100 руб. – 500 руб.</h3>
+							<select name="sorting-rule" id="sorting-rule" title="Сортировка">
+								<option value="popular">по популярности</option>
+								<option value="first-chip">сначала недорогие</option>
+								<option value="first-expensive">сначала дорогие</option>
+								<option value="fat">по жирности</option>
+							</select>
+						</div>
+
+						<div class="filter-col">
+							<h3 class="filter-heading">Жирность</h3>
+							<fieldset>
+								<label>
+									<input type="radio" name="fat-amount">
+									<span class="radio-label">0%</span>
+								</label>
+								<label>
+									<input type="radio" name="fat-amount">
+									<span class="radio-label">До 10%</span>
+								</label>
+								<label>
+									<input type="radio" name="fat-amount">
+									<span class="radio-label">До 30%</span>
+								</label>
+								<label>
+									<input type="radio" name="fat-amount">
+									<span class="radio-label">Више 30%</span>
+								</label>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="filter-row">
+						<div class="filter-col">
+							<h3 class="filter-heading">Наполнители</h3>
+							<fieldset>
+								<label>
+									<input type="checkbox" name="">
+									<span class="checkbox-label">Шоколадные</span>
+								</label>
+								<label>
+									<input type="checkbox" name="">
+									<span class="checkbox-label">Сахарные присыпки</span>
+								</label>
+								<label>
+									<input type="checkbox" name="">
+									<span class="checkbox-label">Фрукты</span>
+								</label>
+								<label>
+									<input type="checkbox" name="">
+									<span class="checkbox-label">Сиропы</span>
+								</label>
+								<label>
+									<input type="checkbox" name="">
+									<span class="checkbox-label">Джемы</span>
+								</label>
+							</fieldset>
+						</div>
+						<button class="btn-filters" type="submit">Применить</button>
+					</div>
+				</form>
+			</section>
+
+			<section class="showcase">
+				<div class="ice-row">
+					<h3 class="visually-hidden">Cорта мороженго</h3>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/1.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>310</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/2.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>380</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/3.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>355</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/4.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>415</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное с брусничным джемом</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/5.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>325</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочно-черничное с цельными ягодами черники </a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/6.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>410</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочно-черничное с цельными ягодами черники</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/7.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>375</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное с шоколадной стружкой</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/8.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>320</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочно-ванильное с кусочками шоколада</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/9.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>440</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочноe с ментоловым сиропом</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/10.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>435</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное с кусочками черного шоколада</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/11.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>355</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+					<article class="card-hit">
+						<h4 class="card-name">
+							<a href="#">Сливочное с мятным сиропом</a>
+						</h4>
+						<div class="card-inner">
+							<div class="card-inner-pic">
+								<img src="img/ice-cream-sort/12.jpg" alt="ice sort">
+							</div>
+							<p class="card-price">
+								<b>420</b>
+								<span class="img-rub">
+									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
+								</span>
+								<span>/кг</span>
+							</p>
+						</div>
+					</article>
+
+				</div>
+			</section>
+			<section class="pagination"></section>
+		</main>
+
+   <!--  <main class="main-content">
     	<div class="container">
     		<div class="bg-light"></div>
     		<div class="hero">
@@ -110,18 +429,6 @@
     					</div>
     				</div>
     			</section>
-    			<div class="hero-toggles">
-    				<h3 class="visually-hidden">Слайди</h3>
-    				<button class="taggle taggle-current" type="button">
-    					<span class="visually-hidden">Слайдер1</span>
-    				</button>
-    				<button class="taggle" type="button">
-    					<span class="visually-hidden">Слайдер2</span>
-    				</button>
-    				<button class="taggle" type="button">
-    					<span class="visually-hidden">Слайдер3</span>
-    				</button>
-    			</div>
     		</div>
 
 				<div class="main-row">
@@ -285,7 +592,7 @@
     			</div>
     		</div>
     	</section>
-    </main>
+    </main> -->
 		
 		<footer class="index-footer container">
 			<div class="footer-small">
