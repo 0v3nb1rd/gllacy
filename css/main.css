@@ -497,9 +497,7 @@ input[type="radio"].visually-hidden {
 .inner-page {
 	margin-top: 30px;
 }
-.breadcrumbs {
 
-}
 .breadcrumbs .crumbs-list {
 	display: flex;
 	padding: 0;
@@ -543,8 +541,8 @@ input[type="radio"].visually-hidden {
 
 /*     /////     .Filters     /////     */
 .filters {
-	border: 1px solid #000;
-	padding-top: 25px;
+	/*border: 1px solid #000;*/
+	padding-top: 10px;
 	padding-bottom: 25px;
 }
 .main-filter {
@@ -553,38 +551,190 @@ input[type="radio"].visually-hidden {
 }
 .main-filter .filter-row {
 	display: flex;
-
-}
-.filter-col fieldset{
-	
+	align-items: flex-end;
+	margin-top: 15px;
 }
 .filter-heading {
 	margin: 0;
+	margin-left: 15px;
+	margin-bottom: 7px;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 500;
 }
 
-
-.btn-filters {
+.filter-box {
+	position: relative;
+	overflow: hidden;
+}
+.filter-box .select-inner {
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-right: 30px;
+	padding-left: 15px;
+	border: 0;
+	border-radius: 50px;
 	color: #fff;
-	border-color: #fff;
+	background-color: rgba(255,255,255,.2);
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	width: 100%;
+	-webkit-appearance: none;
+}
+.filter-box::after {
+	content: "";
+	position: absolute;
+	top: 13px;
+	right: 16px;
+	display: block;
+	width: 0;
+	border-style: solid;
+	border-width: 10px 5px 0 5px;
+	border-color: currentColor transparent transparent transparent;
+	pointer-events: none;
+	color: #fff;
+}
+.range-controls {
+	height: 36px;
+	width: 218px;
+	padding: 0 20px;
+	background-color: rgba(255,255,255,.2);
+	overflow: hidden;
+	border-radius: 50px;
+	color: #fff;
+}
+.range-controls .scale {
+
+	margin-top: 16px;
+	height: 4px;
+	background-color: rgba(255,255,255,0.3);
+}
+.range-controls .bar {
+	position: relative;
+	height: 4px;
+	background-color: #fff;
+}
+.bar .toggle {
+	position: absolute;
+	top: -8px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	border: 8px solid white;
+	background-color: #ababab;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	/*opacity: 0.2;*/
+}
+.range-controls .min-toggle {
+	left: -10px;
+}
+.range-controls .max-toggle {
+	left: 93%;
+}
+.filter-field,
+.filter-submit {
+	padding: 7px 15px;
+	border: 0;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 50px;
+}
+
+.filter-field .radio {
+	position: relative;
+	cursor: pointer;
+}
+.filter-field .radio-input,
+.filter-field .checkbox-input {
+	position: absolute;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0;
+}
+.filter-field .radio-label {
+	max-width: 210px;
+	padding: 3px 0 1px 30px;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
+}
+.radio-label::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	padding: 3px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background-clip: content-box;
+	opacity: 0.8;
+}
+.radio-input:active:focus+.radio-label::before,
+.radio-input:checked+.radio-label::before {
+	background-color: #fff;
+}
+.filter-field .checkbox {
+	position: relative;
+}
+.filter-field .checkbox-label {
+	max-width: 210px;
+	padding: 2px 0 2px 33px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+.checkbox-label::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-clip: content-box;
+	background-image: url("../img/svg-gllacy/checkbox-off.svg");
+	background-position: 0 0;
+	background-size: cover;
+	opacity: 0.8;
+}
+.checkbox-input:not(:checked)+.checkbox-label::before,
+.checkbox-input:checked:active+.checkbox-label::before {
+	width: 22px;
+	background-image: url("../img/svg-gllacy/checkbox-on.svg");
+	background-position: 0 0;
+	background-size: cover;
+}
 
-	border-radius: 50px;
+
+.filter-submit {
+	border: 2px solid #fff;
 	width: 144px;
-	height: 37px
-  border-style: solid;
-  border-width: 2px;
-  background-color: rgba(255, 255, 255, 0.188);
-  /*position: absolute;
-  left: 741px;
-  top: 279px;
-  width: 144px;
-  height: 37px;
-  z-index: 106;*/
+	height: 37px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+.radio:not(:last-of-type) {
+	margin-right: 15px;
+}
+.checkbox:not(:last-of-type) {
+	margin-right: 15px;
+}
+.filter-col:not(:last-of-type) {
+	margin-right: 15px;
+}
+.filter-col-last {
+	margin-right: 10px;
 }
 
 /*      /////      .Ice-row (Популярние сорти)     /////     */
@@ -598,7 +748,6 @@ input[type="radio"].visually-hidden {
 .ice-row .card-hit {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column-reverse;
 	width: 267px;
 	margin-bottom: 25px;
@@ -616,6 +765,7 @@ input[type="radio"].visually-hidden {
 .card-hit .card-name {
 	margin: 0;
 	margin-top: 15px;
+	margin-bottom: auto;
 	text-align: center;
 }
 .card-name a {
@@ -655,6 +805,70 @@ input[type="radio"].visually-hidden {
 .card-price span {
 	font-size: 30px;
 	font-weight: 700;
+}
+
+/*      //////      .Pagination inner     /////      */
+.pagination {
+	display: flex;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.pagination-list {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	margin-left: auto;
+	list-style: none;
+}
+.pagination-list .pagination-item {
+	display: block;
+}
+.pagination-list a {
+	display: block;
+	padding: 5px 8px;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	color: #fff;
+	/*border: 1px solid #000;*/
+}
+.pagination-list .pagination-link-arrow {
+	position: relative;
+}
+.pagination-list .pagination-link-prev::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-bottom: 2px solid #f2f2f2;
+	border-left: 2px solid #f2f2f2;
+	border-radius: 2%;
+}
+.pagination-list .pagination-link-next::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(-135deg);
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-bottom: 2px solid #f2f2f2;
+	border-left: 2px solid #f2f2f2;
+	border-radius: 2%;
+}
+.pagination-list .pagination-link-disabled {
+	opacity: 0.25;
+	cursor: default;
+}
+.pagination-item-current a{
+	background-color: #fff;
+	color: #000;
 }
 
 /*     /////     About-us     /////     /////     */

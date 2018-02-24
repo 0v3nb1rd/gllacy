@@ -112,43 +112,48 @@
 				<h2 class="visually-hidden">Фильтр товаров</h2>
 				<form class="main-filter" action="#" method="GET">
 					<div class="filter-row">
+
 						<div class="filter-col">
-							<h3 class="filter-heading">Сортировка</h3>
-							<select name="sorting-rule" id="sorting-rule" title="Сортировка">
-								<option value="popular">по популярности</option>
-								<option value="first-chip">сначала недорогие</option>
-								<option value="first-expensive">сначала дорогие</option>
-								<option value="fat">по жирности</option>
-							</select>
+							<h3 class="filter-heading">Сортировка:</h3>
+							<div class="filter-box">
+								<select class="select-inner" name="sorting-rule" id="sorting-rulle" title="Сортировка">
+									<option value="popular">по популярности</option>
+									<option value="first-chip">сначала недорогие</option>
+									<option value="first-expensive">сначала дорогие</option>
+									<option value="fat">по жирности</option>
+								</select>
+							</div>
 						</div>
 
 						<div class="filter-col">
 							<h3 class="filter-heading">Цена: 100 руб. – 500 руб.</h3>
-							<select name="sorting-rule" id="sorting-rule" title="Сортировка">
-								<option value="popular">по популярности</option>
-								<option value="first-chip">сначала недорогие</option>
-								<option value="first-expensive">сначала дорогие</option>
-								<option value="fat">по жирности</option>
-							</select>
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar" style="width:80%;">
+										<div class="toggle min-toggle"></div>
+										<div class="toggle max-toggle"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<div class="filter-col">
 							<h3 class="filter-heading">Жирность</h3>
-							<fieldset>
-								<label>
-									<input type="radio" name="fat-amount">
+							<fieldset class="filter-field">
+								<label class="radio">
+									<input class="radio-input" type="radio" name="fat-amount">
 									<span class="radio-label">0%</span>
 								</label>
-								<label>
-									<input type="radio" name="fat-amount">
+								<label class="radio">
+									<input class="radio-input" type="radio" name="fat-amount">
 									<span class="radio-label">До 10%</span>
 								</label>
-								<label>
-									<input type="radio" name="fat-amount">
+								<label class="radio">
+									<input class="radio-input" type="radio" name="fat-amount">
 									<span class="radio-label">До 30%</span>
 								</label>
-								<label>
-									<input type="radio" name="fat-amount">
+								<label class="radio">
+									<input class="radio-input" type="radio" name="fat-amount">
 									<span class="radio-label">Више 30%</span>
 								</label>
 							</fieldset>
@@ -156,32 +161,32 @@
 					</div>
 
 					<div class="filter-row">
-						<div class="filter-col">
+						<div class="filter-col filter-col-last">
 							<h3 class="filter-heading">Наполнители</h3>
-							<fieldset>
-								<label>
-									<input type="checkbox" name="">
+							<fieldset class="filter-field">
+								<label class="checkbox">
+									<input class="checkbox-input" type="checkbox" name="" checked>
 									<span class="checkbox-label">Шоколадные</span>
 								</label>
-								<label>
-									<input type="checkbox" name="">
+								<label class="checkbox">
+									<input class="checkbox-input" type="checkbox" name="" checked>
 									<span class="checkbox-label">Сахарные присыпки</span>
 								</label>
-								<label>
-									<input type="checkbox" name="">
+								<label class="checkbox">
+									<input class="checkbox-input" type="checkbox" name="">
 									<span class="checkbox-label">Фрукты</span>
 								</label>
-								<label>
-									<input type="checkbox" name="">
+								<label class="checkbox">
+									<input class="checkbox-input" type="checkbox" name="">
 									<span class="checkbox-label">Сиропы</span>
 								</label>
-								<label>
-									<input type="checkbox" name="">
+								<label class="checkbox">
+									<input class="checkbox-input" type="checkbox" name="">
 									<span class="checkbox-label">Джемы</span>
 								</label>
 							</fieldset>
 						</div>
-						<button class="btn-filters" type="submit">Применить</button>
+						<button class="filter-submit" type="submit">Применить</button>
 					</div>
 				</form>
 			</section>
@@ -405,194 +410,21 @@
 							</p>
 						</div>
 					</article>
-
 				</div>
 			</section>
-			<section class="pagination"></section>
+
+			<section class="pagination">
+				<ul class="pagination-list">
+						<li class="pagination-item"><a class="pagination-link-arrow pagination-link-disabled pagination-link-prev" href="#"><span class="visually-hidden">Предведущая страница</span></a></li>
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">4</a></li>
+            <li class="pagination-item"><a href="#">5</a></li>
+            <li class="pagination-item"><a class="pagination-link-arrow pagination-link-next" href="#"><span class="visually-hidden">Следующфя страница</span></a></li>
+          </ul>
+			</section>
 		</main>
-
-   <!--  <main class="main-content">
-    	<div class="container">
-    		<div class="bg-light"></div>
-    		<div class="hero">
-    			<section class="slider slider-first">
-    				<div class="slider-info">
-    					<h2>Крем-брюле и пломбир с малиновым джемом</h2>
-    					<a class="btn" href="#">Давайте оба!</a>
-    				</div>
-    				<div class="slider-image">
-    					<div class="left-ice">
-    						<img src="img/Мороженко 1.png" alt="ice">
-    					</div>
-    					<div class="right-ice">
-    						<img src="img/Мороженко 2.png" alt="ice-2">
-    					</div>
-    				</div>
-    			</section>
-    		</div>
-
-				<div class="main-row">
-	    		<article class="specials">
-	    			<div class="specials-inner">
-	    				<h3>Малинка даром!</h3>
-	    				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-	    			</div>
-	    			<a class="btn btn-specials" href="#">Хочу варенье!</a>
-	    		</article>
-
-	    		<article class="specials specials-choco">
-	    			<div class="specials-inner">
-	    				<h3>Шоколадки даром!</h3>
-	    				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-	    			</div>
-	    			<a class="btn btn-specials" href="#">Хочу шоколадки!</a>
-	    		</article>
-    		</div>
-
-				<div class="ice-row">
-					<h3 class="visually-hidden">Популярние сорти мороженго</h3>
-
-					<article class="card-hit">
-						<h4 class="card-name">
-							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-						</h4>
-						<div class="card-inner">
-							<div class="card-inner-pic">
-								<img src="img/ice-cream-sort/1.jpg" alt="ice sort">
-							</div>
-							<p class="card-price">
-								<b>310</b>
-								<span class="img-rub">
-									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
-								</span>
-								<span>/кг</span>
-							</p>
-						</div>
-					</article>
-
-					<article class="card-hit">
-						<h4 class="card-name">
-							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
-						</h4>
-						<div class="card-inner">
-							<div class="card-inner-pic">
-								<img src="img/ice-cream-sort/2.jpg" alt="ice sort">
-							</div>
-							<p class="card-price">
-								<b>380</b>
-								<span class="img-rub">
-									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
-								</span>
-								<span>/кг</span>
-							</p>
-						</div>
-					</article>
-
-					<article class="card-hit">
-						<h4 class="card-name">
-							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-						</h4>
-						<div class="card-inner">
-							<div class="card-inner-pic">
-								<img src="img/ice-cream-sort/3.jpg" alt="ice sort">
-							</div>
-							<p class="card-price">
-								<b>355</b>
-								<span class="img-rub">
-									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
-								</span>
-								<span>/кг</span>
-							</p>
-						</div>
-					</article>
-
-					<article class="card-hit">
-						<h4 class="card-name">
-							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-						</h4>
-						<div class="card-inner">
-							<div class="card-inner-pic">
-								<img src="img/ice-cream-sort/4.jpg" alt="ice sort">
-							</div>
-							<p class="card-price">
-								<b>415</b>
-								<span class="img-rub">
-									<img src="img/svg-gllacy/ruble.svg" width="31" height="36" alt="rubley">
-								</span>
-								<span>/кг</span>
-							</p>
-						</div>
-					</article>
-				</div>
-
-				<section class="about-us">
-					<h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-					<ul class="about-us-list">
-						<li>
-							<div class="about-us-img">
-								<img src="img/svg-gllacy/ice-cream.svg" width="49" height="49" alt="ice-cream">
-							</div>
-							<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-						</li>
-						<li>
-							<div class="about-us-img">
-								<img src="img/svg-gllacy/cow.svg" width="49" height="49" alt="cow">
-							</div>
-							<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-						</li>
-						<li>
-							<div class="about-us-img">
-								<img src="img/svg-gllacy/eco.svg" width="49" height="49" alt="eco">
-							</div>
-							<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-						</li>
-						<li>
-							<div class="about-us-img">
-								<img src="img/svg-gllacy/thermometer.svg" width="49" height="49" alt="thermometer">
-							</div>
-							<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-						</li>
-					</ul>
-				</section>
-
-				<div class="main-row">
-	    		<article class="specials news-blog">
-	    			<div class="specials-inner">
-	    				<p>Новое в нашем блоге</p>
-	    				<a href="#"><span>10 способов сервировки<br> фруктовых щербетов к<br> столу</span></a>
-	    			</div>
-	    		</article>
-
-	    		<article class="specials subscribe">
-	    			<div class="specials-inner">
-	    				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-	    				<fieldset class="subscribe-field">
-	    					<div class="subscribe-input">
-	    						<input type="text" placeholder="Электронная почта">
-	    						<button class="btn btn-specials" type="submit" href="#">Отправить</button>
-	    					</div>
-	    				</fieldset>
-	    			</div>
-	    		</article>
-    		</div>
-    	</div>
-    	<section class="map">
-    		<h3 class="visually-hidden">Наш адрес и карта</h3>
-    		<div class="map-google">
-    			<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6076806170067!2d30.320580416097012!3d59.93865188187615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JHQvtC70YzRiNCw0Y8g0LrQvtC90Y7RiNC10L3QvdCw0Y8gMTkvOA!5e0!3m2!1sen!2sua!4v1518816269385" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    		</div>
-    		<div class="container">
-    			<div class="map-info">
-	    			<span>Адрес главного офиса<br> и офлайн магазина:</span>
-	    			<p class="map-info-str">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-	    			<span>Для заказов по телефону:</span>
-	    			<p>8 812 450-25-25</p>
-	    			<span>(с 10 до 20 ежедневно)</span>
-	    			<a class="btn btn-map" href="#">Форма обратной связи</a>
-    			</div>
-    		</div>
-    	</section>
-    </main> -->
 		
 		<footer class="index-footer container">
 			<div class="footer-small">
